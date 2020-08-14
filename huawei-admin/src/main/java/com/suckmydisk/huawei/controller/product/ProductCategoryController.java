@@ -1,4 +1,4 @@
-package com.suckmydisk.huawei.controller;
+package com.suckmydisk.huawei.controller.product;
 
 import com.suckmydisk.huawei.entity.ProductCategory;
 import com.suckmydisk.huawei.service.ProductCategoryService;
@@ -15,7 +15,7 @@ import javax.annotation.Resource;
  * @since 2020-08-14 10:09:48
  */
 @RestController
-@RequestMapping("productCategory")
+@RequestMapping("productCategories")
 public class ProductCategoryController {
     /**
      * 服务对象
@@ -29,9 +29,11 @@ public class ProductCategoryController {
      * @param id 主键
      * @return 单条数据
      */
-    @GetMapping("selectOne")
+    @GetMapping
     public ProductCategory selectOne(Long id) {
         return this.productCategoryService.queryById(id);
     }
+
+
 
 }

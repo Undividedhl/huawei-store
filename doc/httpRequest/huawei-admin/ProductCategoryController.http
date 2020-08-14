@@ -1,0 +1,2 @@
+### 通过主键查询单条数据
+GET http://{{url}}/productCategories?id=1
