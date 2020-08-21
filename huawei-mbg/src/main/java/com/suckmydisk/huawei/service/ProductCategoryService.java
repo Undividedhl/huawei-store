@@ -23,11 +23,11 @@ public interface ProductCategoryService {
     /**
      * 查询多条数据
      *
-     * @param offset 查询起始位置
-     * @param limit  查询条数
+     * @param page 查询起始页
+     * @param pageSize  查询条数
      * @return 对象列表
      */
-    List<ProductCategory> queryAllByLimit(int offset, int limit);
+    List<ProductCategory> queryAllByPage(int page, int pageSize);
 
     /**
      * 新增数据

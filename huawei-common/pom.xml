@@ -6,13 +6,14 @@
         <groupId>com.suckmydisk</groupId>
         <artifactId>huawei-store</artifactId>
         <version>0.0.1-SNAPSHOT</version>
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.suckmydisk</groupId>
-    <artifactId>huawei-admin</artifactId>
+    <artifactId>huawei-common</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>huawei-admin</name>
-    <description>Huawei store application admin</description>
-    <packaging>jar</packaging>
+    <name>huawei-common</name>
+    <description>Demo project for Spring Boot</description>
+
     <properties>
         <java.version>1.8</java.version>
     </properties>
@@ -20,39 +21,7 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <scope>runtime</scope>
-            <optional>true</optional>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
-        </dependency>
-
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.21</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.suckmydisk</groupId>
-            <artifactId>huawei-mbg</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.suckmydisk</groupId>
-            <artifactId>huawei-common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
         <dependency>

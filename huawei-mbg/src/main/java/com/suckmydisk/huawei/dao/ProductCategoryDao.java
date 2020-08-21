@@ -28,11 +28,11 @@ public interface ProductCategoryDao {
     /**
      * 查询指定行数据
      *
-     * @param offset 查询起始位置
-     * @param limit  查询条数
+     * @param page 查询起始位置
+     * @param pageSize  查询条数
      * @return 对象列表
      */
-    List<ProductCategory> queryAllByLimit(@Param("offset") int offset, @Param("limit") int limit);
+    List<ProductCategory> queryAllByPage(@Param("page") int page, @Param("pageSize") int pageSize);
 
 
     /**

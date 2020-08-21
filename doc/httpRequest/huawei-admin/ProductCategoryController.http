@@ -1,2 +1,4 @@
 ### 通过主键查询单条数据
-GET http://{{url}}/productCategories?id=1
+GET http://{{url}}/productCategories?page=0&pageSize=10
+
+

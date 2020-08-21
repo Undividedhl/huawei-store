@@ -33,13 +33,13 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
     /**
      * 查询多条数据
      *
-     * @param offset 查询起始位置
-     * @param limit  查询条数
+     * @param page 查询起始位置
+     * @param pageSize  查询条数
      * @return 对象列表
      */
     @Override
-    public List<ProductCategory> queryAllByLimit(int offset, int limit) {
-        return this.productCategoryDao.queryAllByLimit(offset, limit);
+    public List<ProductCategory> queryAllByPage(int page, int pageSize) {
+        return this.productCategoryDao.queryAllByPage(page, pageSize);
     }
 
     /**
