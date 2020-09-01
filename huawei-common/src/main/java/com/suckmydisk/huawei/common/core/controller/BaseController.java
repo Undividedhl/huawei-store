@@ -2,7 +2,7 @@ package com.suckmydisk.huawei.common.core.controller;
 
 import com.github.pagehelper.PageHelper;
 import com.suckmydisk.huawei.common.core.page.PageDomain;
-import com.suckmydisk.huawei.common.core.page.TableSupport;
+import com.suckmydisk.huawei.common.core.page.PageSupport;
 import com.suckmydisk.huawei.common.utils.SqlUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,7 +20,7 @@ public class BaseController {
      * 设置请求分页数据
      */
     protected void startPage() {
-        PageDomain pageDomain = TableSupport.buildPageRequest();
+        PageDomain pageDomain = PageSupport.buildPageRequest();
         Integer page = pageDomain.getPage();
         Integer pageSize = pageDomain.getPageSize();
         if (!StringUtils.isEmpty(page) && !StringUtils.isEmpty(pageSize)) {

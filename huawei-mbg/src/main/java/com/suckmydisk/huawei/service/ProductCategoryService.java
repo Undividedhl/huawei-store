@@ -21,6 +21,13 @@ public interface ProductCategoryService {
     ProductCategory queryById(Long id);
 
     /**
+     * 查询所有数据
+     * 
+     * @return 对象集合
+     */
+    List<ProductCategory> queryAll();
+
+    /**
      * 查询多条数据
      *
      * @param offset 查询起始位置

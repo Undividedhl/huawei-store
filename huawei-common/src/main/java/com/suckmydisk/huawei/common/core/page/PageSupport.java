@@ -9,7 +9,7 @@ import com.suckmydisk.huawei.common.ServletUtils;
  * @date 2020/8/31
  */
 
-public class TableSupport {
+public class PageSupport {
 
     /**
      * 当前记录起始索引

@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * 分类表(ProductCategory)表服务实现类
  *
- * @author makejava
+ * @author coriander
  * @since 2020-09-01 16:09:52
  */
 @Service("productCategoryService")
@@ -30,6 +30,11 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
         return this.productCategoryDao.queryById(id);
     }
 
+    @Override
+    public List<ProductCategory> queryAll() {
+        return productCategoryDao.queryAll(null);
+    }
+    
     /**
      * 查询多条数据
      *
