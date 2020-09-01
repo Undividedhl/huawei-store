@@ -7,10 +7,10 @@ import java.util.Date;
  * 分类表(ProductCategory)实体类
  *
  * @author makejava
- * @since 2020-08-14 10:09:31
+ * @since 2020-09-01 16:09:48
  */
 public class ProductCategory implements Serializable {
-    private static final long serialVersionUID = -36663324267110538L;
+    private static final long serialVersionUID = -11476500542742464L;
     /**
      * 自增id
      */

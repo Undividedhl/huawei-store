@@ -1,20 +1,16 @@
 package com.suckmydisk.huawei.dao;
 
-
 import com.suckmydisk.huawei.entity.ProductCategory;
-import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
-
 
 /**
  * 分类表(ProductCategory)表数据库访问层
  *
  * @author makejava
- * @since 2020-08-14 10:09:32
+ * @since 2020-09-01 16:09:50
  */
-@Mapper
 public interface ProductCategoryDao {
 
     /**
@@ -28,11 +24,11 @@ public interface ProductCategoryDao {
     /**
      * 查询指定行数据
      *
-     * @param page 查询起始位置
-     * @param pageSize  查询条数
+     * @param offset 查询起始位置
+     * @param limit  查询条数
      * @return 对象列表
      */
-    List<ProductCategory> queryAllByPage(@Param("page") int page, @Param("pageSize") int pageSize);
+    List<ProductCategory> queryAllByLimit(@Param("offset") int offset, @Param("limit") int limit);
 
 
     /**

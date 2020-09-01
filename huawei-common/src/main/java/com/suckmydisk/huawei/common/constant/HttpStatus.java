@@ -1,4 +1,4 @@
-package com.suckmydisk.huawei.constant;
+package com.suckmydisk.huawei.common.constant;
 
 /**
  * 返回状态码

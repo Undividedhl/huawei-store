@@ -12,7 +12,7 @@ import java.util.List;
  * 分类表(ProductCategory)表服务实现类
  *
  * @author makejava
- * @since 2020-08-14 10:09:32
+ * @since 2020-09-01 16:09:52
  */
 @Service("productCategoryService")
 public class ProductCategoryServiceImpl implements ProductCategoryService {
@@ -33,13 +33,13 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
     /**
      * 查询多条数据
      *
-     * @param page 查询起始位置
-     * @param pageSize  查询条数
+     * @param offset 查询起始位置
+     * @param limit  查询条数
      * @return 对象列表
      */
     @Override
-    public List<ProductCategory> queryAllByPage(int page, int pageSize) {
-        return this.productCategoryDao.queryAllByPage(page, pageSize);
+    public List<ProductCategory> queryAllByLimit(int offset, int limit) {
+        return this.productCategoryDao.queryAllByLimit(offset, limit);
     }
 
     /**

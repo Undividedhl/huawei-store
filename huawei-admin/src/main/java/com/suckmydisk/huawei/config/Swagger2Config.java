@@ -1,6 +1,5 @@
 package com.suckmydisk.huawei.config;
 
-import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -49,9 +48,9 @@ public class Swagger2Config {
                 // 设置页面标题
                 .title("Huawei-admin ")
                 // 设置联系人
-                .contact(new Contact("糟糕，我的磁盘(断句)", "https://suckmydisk.cn", ""))
+                .contact(new Contact("Huawei-admin api document.", "", ""))
                 // 描述
-                .description("欢迎访问接口文档")
+                .description("正在访问 admin 接口文档")
                 // 定义版本号
                 .version("1.0").build();
     }

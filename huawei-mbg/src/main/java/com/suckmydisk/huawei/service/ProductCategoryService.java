@@ -8,7 +8,7 @@ import java.util.List;
  * 分类表(ProductCategory)表服务接口
  *
  * @author makejava
- * @since 2020-08-14 10:09:32
+ * @since 2020-09-01 16:09:52
  */
 public interface ProductCategoryService {
 
@@ -23,11 +23,11 @@ public interface ProductCategoryService {
     /**
      * 查询多条数据
      *
-     * @param page 查询起始页
-     * @param pageSize  查询条数
+     * @param offset 查询起始位置
+     * @param limit  查询条数
      * @return 对象列表
      */
-    List<ProductCategory> queryAllByPage(int page, int pageSize);
+    List<ProductCategory> queryAllByLimit(int offset, int limit);
 
     /**
      * 新增数据

@@ -1,6 +1,6 @@
-package com.suckmydisk.huawei.core.domain;
+package com.suckmydisk.huawei.common.core.domain;
 
-import com.suckmydisk.huawei.constant.HttpStatus;
+import com.suckmydisk.huawei.common.constant.HttpStatus;
 import org.springframework.util.StringUtils;
 
 import java.util.HashMap;

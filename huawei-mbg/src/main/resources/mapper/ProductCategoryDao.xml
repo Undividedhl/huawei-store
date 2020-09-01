@@ -34,7 +34,7 @@
     </select>
 
     <!--查询指定行数据-->
-    <select id="queryAllByPage" resultMap="ProductCategoryMap">
+    <select id="queryAllByLimit" resultMap="ProductCategoryMap">
         select id,
                code,
                name,
@@ -46,7 +46,8 @@
                create_time,
                update_by,
                update_time
-        from product_category
+        from huawei_store.product_category
+        limit #{offset}, #{limit}
     </select>
 
     <!--通过实体作为筛选条件查询-->
