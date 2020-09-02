@@ -10,3 +10,9 @@ spring:
 
 mybatis:
   mapper-locations: classpaths:mapper/**/**.xml
+logging:
+  level:
+    com:
+      suckmydisk:
+        huawei:
+          dao: debug

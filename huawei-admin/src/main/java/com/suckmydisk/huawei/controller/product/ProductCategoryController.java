@@ -33,7 +33,7 @@ public class ProductCategoryController extends BaseController {
      * @return 分页数据
      */
     @GetMapping("/productCategories")
-    @ApiOperation("获取所有产品分类")
+    @ApiOperation("获取分页数据")
     public AjaxResult getProductCategory() {
         startPage();
         List<ProductCategory> productCategories = productCategoryService.queryAll();
@@ -48,10 +48,10 @@ public class ProductCategoryController extends BaseController {
      * @param id
      * @return 单条数据
      */
-    @GetMapping("/productCategories")
+    @GetMapping("/productCategories/{id}")
+    @ApiOperation("根据ID获取单条数据")
     public AjaxResult getProductCategoryById(@PathVariable("id") long id) {
-        productCategoryService.queryById(id);
-        return AjaxResult.success(id);
+        return AjaxResult.success(productCategoryService.queryById(id));
     }
 
     /**
@@ -60,7 +60,8 @@ public class ProductCategoryController extends BaseController {
      * @param productCategory
      */
     @PostMapping("/productCategories")
-    public AjaxResult addProductCategory(@RequestParam @Validated ProductCategory productCategory) {
+    @ApiOperation("新增一条数据")
+    public AjaxResult addProductCategory(@RequestBody @Validated ProductCategory productCategory) {
         productCategoryService.insert(productCategory);
         return AjaxResult.success();
     }
@@ -71,6 +72,7 @@ public class ProductCategoryController extends BaseController {
      * @param id
      */
     @DeleteMapping("/productCategories/{id}")
+    @ApiOperation("根据ID删除数据")
     public AjaxResult deleteProductCategory(@PathVariable("id") long id) {
         productCategoryService.deleteById(id);
         return AjaxResult.success();
@@ -82,6 +84,7 @@ public class ProductCategoryController extends BaseController {
      * @param productCategory
      */
     @PutMapping("/productCategories")
+    @ApiOperation("更新数据")
     public AjaxResult updateProductCategory(@RequestBody @Validated ProductCategory productCategory) {
         Long id = productCategory.getId();
         if (id == null) {

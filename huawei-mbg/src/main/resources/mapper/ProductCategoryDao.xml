@@ -30,7 +30,7 @@
                update_by,
                update_time
         from huawei_store.product_category
-        where id = #{id}
+        where id = #{id} and del_flag = 0
     </select>
 
     <!--查询指定行数据-->
@@ -89,6 +89,7 @@
             <if test="updateTime != null">
                 and update_time = #{updateTime}
             </if>
+                and del_flag = 0
         </where>
     </select>
 
@@ -139,10 +140,8 @@
     </update>
 
     <!--通过主键删除-->
-    <delete id="deleteById">
-        delete
-        from huawei_store.product_category
-        where id = #{id}
-    </delete>
+    <update id="deleteById">
+        update product_category set del_flag = 2
+    </update>
 
 </mapper>
